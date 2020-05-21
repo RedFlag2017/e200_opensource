@@ -537,5 +537,15 @@ e200_soc_top u_e200_soc_top(
     .io_pads_dbgmode2_n_i_ival       (1'b1) 
 );
  
+// dump fsdb file for debussy
 
+initial
+
+begin
+
+      $fsdbDumpfile("./wave.fsdb");
+      //$fsdbDumpvars(0,u_e200_soc_top);
+      $fsdbDumpvars(0,tb_top);
+
+end
 endmodule
