@@ -21,7 +21,7 @@ SIM_TOOL      := vcs -full64 -cpp g++-4.8 -cc gcc-4.8 -LDFLAGS -Wl,-no-as-needed
 SIM_OPTIONS   := #To-ADD: to add the simulatoin tool options 
 
 #SIM_OPTIONS   := -o vvp.exec -I "${VSRC_DIR}/core/" -I "${VSRC_DIR}/perips/" -D DISABLE_SV_ASSERTION=1 -g2005 
-SIM_OPTIONS   := -sverilog -lca -debug_access+all -kdb +vcs+vcdpluson -timescale="1ns/100ps" -l comp.log \
+SIM_OPTIONS   := -sverilog -lca -debug_access+all -kdb  -timescale="1ns/100ps" -l comp.log \
                   +incdir+${VSRC_DIR}/core/ \
                   +incdir+${VSRC_DIR}/perips/  
   # This is a free solution here to use iverilog to compile the code. Please NOTE!!!! 
